@@ -41,7 +41,7 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // show detail and edit
+        // Bring up a sheet, show detail and edit option.
     }
 }
 
