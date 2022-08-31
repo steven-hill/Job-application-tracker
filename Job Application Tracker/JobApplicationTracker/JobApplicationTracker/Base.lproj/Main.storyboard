@@ -125,33 +125,42 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Jb-G8-Eej">
-                                                    <rect key="frame" x="21" y="21" width="135" height="24"/>
+                                                    <rect key="frame" x="21" y="14" width="135" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="J6I-sX-ytb">
-                                                    <rect key="frame" x="21" y="106.5" width="135" height="16"/>
+                                                    <rect key="frame" x="21" y="118" width="135" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="OB8-YL-0xi">
-                                                    <rect key="frame" x="21" y="65.5" width="135" height="20.5"/>
+                                                    <rect key="frame" x="21" y="84.5" width="135" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cY-t3-PF5">
+                                                    <rect key="frame" x="21" y="51" width="135" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="OB8-YL-0xi" secondAttribute="trailing" constant="21" id="21F-pI-hlz"/>
-                                                <constraint firstAttribute="trailing" secondItem="0Jb-G8-Eej" secondAttribute="trailing" constant="21" id="2d2-0r-lkf"/>
-                                                <constraint firstItem="J6I-sX-ytb" firstAttribute="leading" secondItem="gof-Fp-2T2" secondAttribute="leading" constant="21" id="Fm3-de-Aus"/>
-                                                <constraint firstAttribute="bottom" secondItem="J6I-sX-ytb" secondAttribute="bottom" constant="25.5" id="J2T-XS-UCL"/>
-                                                <constraint firstItem="0Jb-G8-Eej" firstAttribute="top" secondItem="gof-Fp-2T2" secondAttribute="top" constant="21" id="XSj-dw-FAZ"/>
-                                                <constraint firstItem="OB8-YL-0xi" firstAttribute="top" secondItem="0Jb-G8-Eej" secondAttribute="bottom" constant="20.5" id="ah4-af-t5V"/>
-                                                <constraint firstItem="0Jb-G8-Eej" firstAttribute="leading" secondItem="gof-Fp-2T2" secondAttribute="leading" constant="21" id="bjD-cM-cJ0"/>
-                                                <constraint firstAttribute="trailing" secondItem="J6I-sX-ytb" secondAttribute="trailing" constant="21" id="flx-g3-SS1"/>
-                                                <constraint firstItem="J6I-sX-ytb" firstAttribute="top" secondItem="OB8-YL-0xi" secondAttribute="bottom" constant="20.5" id="iwC-sT-ZcB"/>
-                                                <constraint firstItem="OB8-YL-0xi" firstAttribute="leading" secondItem="gof-Fp-2T2" secondAttribute="leading" constant="21" id="z3A-FZ-xoa"/>
+                                                <constraint firstItem="J6I-sX-ytb" firstAttribute="top" secondItem="OB8-YL-0xi" secondAttribute="bottom" constant="13" id="5YK-VP-pFU"/>
+                                                <constraint firstAttribute="bottom" secondItem="J6I-sX-ytb" secondAttribute="bottom" constant="14" id="98L-Te-2PJ"/>
+                                                <constraint firstItem="OB8-YL-0xi" firstAttribute="leading" secondItem="gof-Fp-2T2" secondAttribute="leading" constant="21" id="9ma-D1-N7H"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Jb-G8-Eej" secondAttribute="trailing" constant="21" id="HwP-FZ-V02"/>
+                                                <constraint firstItem="J6I-sX-ytb" firstAttribute="leading" secondItem="gof-Fp-2T2" secondAttribute="leading" constant="21" id="S2M-a0-JIp"/>
+                                                <constraint firstAttribute="trailing" secondItem="OB8-YL-0xi" secondAttribute="trailing" constant="21" id="eL6-2n-XZg"/>
+                                                <constraint firstAttribute="trailing" secondItem="J6I-sX-ytb" secondAttribute="trailing" constant="21" id="kc8-rk-9cZ"/>
+                                                <constraint firstItem="0Jb-G8-Eej" firstAttribute="leading" secondItem="gof-Fp-2T2" secondAttribute="leading" constant="21" id="kes-1J-NGF"/>
+                                                <constraint firstItem="1cY-t3-PF5" firstAttribute="leading" secondItem="gof-Fp-2T2" secondAttribute="leading" constant="21" id="lBL-GO-zoT"/>
+                                                <constraint firstItem="0Jb-G8-Eej" firstAttribute="top" secondItem="gof-Fp-2T2" secondAttribute="top" constant="14" id="lhV-W1-r5I"/>
+                                                <constraint firstItem="1cY-t3-PF5" firstAttribute="top" secondItem="0Jb-G8-Eej" secondAttribute="bottom" constant="13" id="o9k-aQ-X78"/>
+                                                <constraint firstItem="OB8-YL-0xi" firstAttribute="top" secondItem="1cY-t3-PF5" secondAttribute="bottom" constant="13" id="oon-Hk-KOu"/>
+                                                <constraint firstAttribute="trailing" secondItem="1cY-t3-PF5" secondAttribute="trailing" constant="21" id="sCC-mS-8oa"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -165,6 +174,7 @@
                                         <connections>
                                             <outlet property="companyLabel" destination="0Jb-G8-Eej" id="GAp-rC-OmH"/>
                                             <outlet property="locationLabel" destination="OB8-YL-0xi" id="wad-OZ-h2a"/>
+                                            <outlet property="positionLabel" destination="1cY-t3-PF5" id="lxX-kB-vi0"/>
                                             <outlet property="statusLabel" destination="J6I-sX-ytb" id="emX-q0-Vdg"/>
                                         </connections>
                                     </collectionViewCell>
