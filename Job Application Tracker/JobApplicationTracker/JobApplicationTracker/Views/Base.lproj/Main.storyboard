@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQf-KA-7LV">
-                                <rect key="frame" x="20" y="215" width="107" height="20.5"/>
+                                <rect key="frame" x="20" y="215" width="194" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Applications" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdZ-FG-q6V">
-                                <rect key="frame" x="20" y="399.5" width="117" height="20.5"/>
+                                <rect key="frame" x="20" y="399.5" width="194" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -182,7 +182,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUF-0N-8BP">
-                                <rect key="frame" x="278" y="392" width="116" height="35"/>
+                                <rect key="frame" x="278.5" y="392" width="115.5" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Return to all"/>
                                 <connections>
@@ -197,16 +197,16 @@
                             <constraint firstItem="wdZ-FG-q6V" firstAttribute="top" secondItem="2hF-Cv-nez" secondAttribute="bottom" constant="27" id="3fM-NL-K1N"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2hF-Cv-nez" secondAttribute="trailing" constant="20" id="5fk-07-Wme"/>
                             <constraint firstItem="wdZ-FG-q6V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FQD-Fs-OyN"/>
-                            <constraint firstItem="jUF-0N-8BP" firstAttribute="leading" secondItem="wdZ-FG-q6V" secondAttribute="trailing" constant="141" id="Gvp-h3-ndE"/>
                             <constraint firstItem="2hF-Cv-nez" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HQc-KO-3Bv"/>
                             <constraint firstItem="2hF-Cv-nez" firstAttribute="top" secondItem="UQf-KA-7LV" secondAttribute="bottom" constant="9" id="LmE-pH-jUF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wdZ-FG-q6V" secondAttribute="trailing" constant="277" id="OfC-IF-4aq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wdZ-FG-q6V" secondAttribute="trailing" constant="200" id="OfC-IF-4aq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WqV-QB-ggg" secondAttribute="trailing" constant="20" id="RCD-eH-Vqb"/>
                             <constraint firstItem="c8n-dK-UGc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RyB-xT-3Nf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UQf-KA-7LV" secondAttribute="trailing" constant="287" id="SoP-ef-SAK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UQf-KA-7LV" secondAttribute="trailing" constant="200" id="SoP-ef-SAK"/>
                             <constraint firstItem="jUF-0N-8BP" firstAttribute="top" secondItem="2hF-Cv-nez" secondAttribute="bottom" constant="19.5" id="Vnf-n4-uak"/>
                             <constraint firstItem="WqV-QB-ggg" firstAttribute="top" secondItem="jUF-0N-8BP" secondAttribute="bottom" constant="2" id="XPd-gi-c88"/>
                             <constraint firstItem="c8n-dK-UGc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZJx-pJ-shg"/>
+                            <constraint firstItem="jUF-0N-8BP" firstAttribute="leading" secondItem="wdZ-FG-q6V" secondAttribute="trailing" constant="64.5" id="f0J-n4-opx"/>
                             <constraint firstItem="c8n-dK-UGc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f2V-3M-Kj0"/>
                             <constraint firstItem="WqV-QB-ggg" firstAttribute="top" secondItem="wdZ-FG-q6V" secondAttribute="bottom" constant="9" id="f7S-lZ-3e7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jUF-0N-8BP" secondAttribute="trailing" constant="20" id="fu6-3C-GRT"/>

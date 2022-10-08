@@ -24,19 +24,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var totalApplicationsLabel: UILabel!
-    
     @IBOutlet weak var activeApplicationsLabel: UILabel!
-    
     @IBOutlet weak var returnToAllButton: UIButton!
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var isTextEntered: Bool {
-        return !searchBar.text!.isEmpty
-    }
-
     var context: NSManagedObjectContext {
         return CoreDataManager.manager.persistentContainer.viewContext
     }
@@ -56,7 +48,7 @@ class HomeViewController: UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
-
+    
     func fetchAllJobApplications() {
         let request: NSFetchRequest<Job> = Job.fetchRequest()
         do {
@@ -72,8 +64,8 @@ class HomeViewController: UIViewController {
                 }
             }
             else {
-                    jobsArray = persistedArray
-                }
+                jobsArray = persistedArray
+            }
         } catch {
             print("Error fetching items \(error)")
             DispatchQueue.main.async {
@@ -86,9 +78,9 @@ class HomeViewController: UIViewController {
             }
         }
     }
-
+    
     func makeSearchQuery() {
-        guard isTextEntered else {
+        guard let queryText = searchBar.text, !queryText.isEmpty else {
             DispatchQueue.main.async {
                 let alert = UIAlertController(title: "No text was entered.", message: "Please enter a company to search for.", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "Ok", style: .default) { _ in
@@ -99,8 +91,7 @@ class HomeViewController: UIViewController {
             }
             return
         }
-        
-        let queryText = searchBar.text!
+
         let request: NSFetchRequest<Job> = Job.fetchRequest()
         request.predicate = NSPredicate(format: "company = %@", "\(queryText)")
         do {

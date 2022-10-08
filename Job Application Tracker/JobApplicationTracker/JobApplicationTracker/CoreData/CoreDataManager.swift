@@ -13,9 +13,7 @@ class CoreDataManager {
     var context: NSManagedObjectContext {
         return CoreDataManager.manager.persistentContainer.viewContext
     }
-    
-    init() {
-    }
+
     static let manager = CoreDataManager()
     
     // MARK: - Core Data stack

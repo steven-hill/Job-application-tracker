@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-protocol JobDetailViewControllerDelegate: AnyObject {
+protocol JobDetailViewControllerDelegate {
     func editJob(_ viewController: JobDetailViewController, editedJob: Job, index: Int)
     func deleteJob(_ viewController: JobDetailViewController, index: Int)
 }
@@ -37,8 +37,8 @@ class JobDetailViewController: UIViewController {
     let statusPopUpButton = PopUpButton()
     let notesTextView = TextView(placeholderText: "Notes")
     let deleteButton = DeleteButton()
-
-    weak var delegate: JobDetailViewControllerDelegate?
+    
+    var delegate: JobDetailViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +50,7 @@ class JobDetailViewController: UIViewController {
         view.addSubview(statusPopUpButton)
         view.addSubview(notesTextView)
         view.addSubview(deleteButton)
-
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneTapped))
         
@@ -62,15 +62,15 @@ class JobDetailViewController: UIViewController {
         deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
         
         layoutViews()
-
+        
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
-
+    
     @objc func cancelTapped() {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     @objc func doneTapped()  {
         let editedJob = Job(context: self.context)
         editedJob.company = companyNameTextfield.text!
@@ -79,7 +79,7 @@ class JobDetailViewController: UIViewController {
         editedJob.status = statusPopUpButton.currentTitle!
         editedJob.notes = notesTextView.text!
         let editedJobIndex = index
-
+        
         delegate?.editJob(self, editedJob: editedJob, index: editedJobIndex)
         self.dismiss(animated: true, completion: nil)
     }

@@ -33,7 +33,7 @@ class PopUpButton: UIButton {
         return UIMenu(children: menuItems)
     }
     
-    func configure() {
+    private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 5
         layer.borderWidth = 2

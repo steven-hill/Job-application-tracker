@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-protocol AddNewJobViewControllerDelegate: AnyObject {
+protocol AddNewJobViewControllerDelegate {
     func addNewJob(_ viewController: AddNewJobViewController, addedJob: Job)
 }
 
@@ -20,12 +20,12 @@ class AddNewJobViewController: UIViewController {
     let statusLabel = StatusLabel()
     let statusPopUpButton = PopUpButton()
     let notesTextView = TextView(placeholderText: "Notes")
-
+    
     var context: NSManagedObjectContext {
         return CoreDataManager.manager.persistentContainer.viewContext
     }
     
-    weak var delegate: AddNewJobViewControllerDelegate?
+    var delegate: AddNewJobViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ class AddNewJobViewController: UIViewController {
         notesTextView.delegate = self
         
         layoutViews()
-
+        
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
