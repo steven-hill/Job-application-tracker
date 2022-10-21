@@ -7,29 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B00FE6528B89C6200C6F71D /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00FE6428B89C6200C6F71D /* Job.swift */; };
-		5B00FE6928B8EBE700C6F71D /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 5B00FE6828B8EBE700C6F71D /* Notes */; };
 		5B00FE6B28B8F90900C6F71D /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00FE6A28B8F90900C6F71D /* JobCell.swift */; };
 		5BE61B5C289BEF1B00E52564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE61B5B289BEF1B00E52564 /* AppDelegate.swift */; };
 		5BE61B5E289BEF1B00E52564 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE61B5D289BEF1B00E52564 /* SceneDelegate.swift */; };
-		5BE61B60289BEF1B00E52564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE61B5F289BEF1B00E52564 /* ViewController.swift */; };
+		5BE61B60289BEF1B00E52564 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE61B5F289BEF1B00E52564 /* HomeViewController.swift */; };
 		5BE61B63289BEF1B00E52564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE61B61289BEF1B00E52564 /* Main.storyboard */; };
 		5BE61B65289BEF1D00E52564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE61B64289BEF1D00E52564 /* Assets.xcassets */; };
 		5BE61B68289BEF1D00E52564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE61B66289BEF1D00E52564 /* LaunchScreen.storyboard */; };
+		5BE9BC6D28EF11B20017B000 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9BC6C28EF11B20017B000 /* Textfield.swift */; };
+		5BE9BC6F28EF11F50017B000 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9BC6E28EF11F50017B000 /* TextView.swift */; };
+		5BE9BC7128EF12280017B000 /* PopUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9BC7028EF12280017B000 /* PopUpButton.swift */; };
+		5BE9BC7328EF12550017B000 /* StatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9BC7228EF12550017B000 /* StatusLabel.swift */; };
+		5BE9BC7528EF12780017B000 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9BC7428EF12780017B000 /* DeleteButton.swift */; };
+		5BE9BC7728EF143A0017B000 /* AddNewJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9BC7628EF143A0017B000 /* AddNewJobViewController.swift */; };
+		5BE9BC7928EF14930017B000 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9BC7828EF14930017B000 /* JobDetailViewController.swift */; };
+		5BE9BC7B28EF15050017B000 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9BC7A28EF15050017B000 /* CoreDataManager.swift */; };
+		5BE9BC7E28EF154B0017B000 /* JobApplicationTrackerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9BC7C28EF154B0017B000 /* JobApplicationTrackerModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B00FE6428B89C6200C6F71D /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
-		5B00FE6828B8EBE700C6F71D /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		5B00FE6A28B8F90900C6F71D /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 		5BE61B58289BEF1B00E52564 /* JobApplicationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobApplicationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE61B5B289BEF1B00E52564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE61B5D289BEF1B00E52564 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BE61B5F289BEF1B00E52564 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BE61B5F289BEF1B00E52564 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5BE61B62289BEF1B00E52564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BE61B64289BEF1D00E52564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE61B67289BEF1D00E52564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE61B69289BEF1D00E52564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE9BC6C28EF11B20017B000 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
+		5BE9BC6E28EF11F50017B000 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		5BE9BC7028EF12280017B000 /* PopUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpButton.swift; sourceTree = "<group>"; };
+		5BE9BC7228EF12550017B000 /* StatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLabel.swift; sourceTree = "<group>"; };
+		5BE9BC7428EF12780017B000 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		5BE9BC7628EF143A0017B000 /* AddNewJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewJobViewController.swift; sourceTree = "<group>"; };
+		5BE9BC7828EF14930017B000 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		5BE9BC7A28EF15050017B000 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5BE9BC7D28EF154B0017B000 /* JobApplicationTrackerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JobApplicationTrackerModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,16 +78,47 @@
 			children = (
 				5BE61B5B289BEF1B00E52564 /* AppDelegate.swift */,
 				5BE61B5D289BEF1B00E52564 /* SceneDelegate.swift */,
-				5B00FE6428B89C6200C6F71D /* Job.swift */,
-				5B00FE6A28B8F90900C6F71D /* JobCell.swift */,
-				5BE61B5F289BEF1B00E52564 /* ViewController.swift */,
-				5BE61B61289BEF1B00E52564 /* Main.storyboard */,
+				5BE9BC7F28EF160D0017B000 /* Views */,
+				5BE9BC8028EF16170017B000 /* ViewControllers */,
+				5BE9BC8128EF16210017B000 /* CoreData */,
 				5BE61B64289BEF1D00E52564 /* Assets.xcassets */,
 				5BE61B66289BEF1D00E52564 /* LaunchScreen.storyboard */,
 				5BE61B69289BEF1D00E52564 /* Info.plist */,
-				5B00FE6828B8EBE700C6F71D /* Notes */,
 			);
 			path = JobApplicationTracker;
+			sourceTree = "<group>";
+		};
+		5BE9BC7F28EF160D0017B000 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B00FE6A28B8F90900C6F71D /* JobCell.swift */,
+				5BE61B61289BEF1B00E52564 /* Main.storyboard */,
+				5BE9BC6C28EF11B20017B000 /* Textfield.swift */,
+				5BE9BC6E28EF11F50017B000 /* TextView.swift */,
+				5BE9BC7028EF12280017B000 /* PopUpButton.swift */,
+				5BE9BC7228EF12550017B000 /* StatusLabel.swift */,
+				5BE9BC7428EF12780017B000 /* DeleteButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BE9BC8028EF16170017B000 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BE61B5F289BEF1B00E52564 /* HomeViewController.swift */,
+				5BE9BC7628EF143A0017B000 /* AddNewJobViewController.swift */,
+				5BE9BC7828EF14930017B000 /* JobDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5BE9BC8128EF16210017B000 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5BE9BC7C28EF154B0017B000 /* JobApplicationTrackerModel.xcdatamodeld */,
+				5BE9BC7A28EF15050017B000 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +181,6 @@
 			files = (
 				5BE61B68289BEF1D00E52564 /* LaunchScreen.storyboard in Resources */,
 				5BE61B65289BEF1D00E52564 /* Assets.xcassets in Resources */,
-				5B00FE6928B8EBE700C6F71D /* Notes in Resources */,
 				5BE61B63289BEF1B00E52564 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,11 +192,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE61B60289BEF1B00E52564 /* ViewController.swift in Sources */,
+				5BE61B60289BEF1B00E52564 /* HomeViewController.swift in Sources */,
+				5BE9BC7928EF14930017B000 /* JobDetailViewController.swift in Sources */,
+				5BE9BC7328EF12550017B000 /* StatusLabel.swift in Sources */,
+				5BE9BC6D28EF11B20017B000 /* Textfield.swift in Sources */,
 				5B00FE6B28B8F90900C6F71D /* JobCell.swift in Sources */,
+				5BE9BC7528EF12780017B000 /* DeleteButton.swift in Sources */,
+				5BE9BC6F28EF11F50017B000 /* TextView.swift in Sources */,
+				5BE9BC7B28EF15050017B000 /* CoreDataManager.swift in Sources */,
+				5BE9BC7128EF12280017B000 /* PopUpButton.swift in Sources */,
 				5BE61B5C289BEF1B00E52564 /* AppDelegate.swift in Sources */,
 				5BE61B5E289BEF1B00E52564 /* SceneDelegate.swift in Sources */,
-				5B00FE6528B89C6200C6F71D /* Job.swift in Sources */,
+				5BE9BC7E28EF154B0017B000 /* JobApplicationTrackerModel.xcdatamodeld in Sources */,
+				5BE9BC7728EF143A0017B000 /* AddNewJobViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +424,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5BE9BC7C28EF154B0017B000 /* JobApplicationTrackerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5BE9BC7D28EF154B0017B000 /* JobApplicationTrackerModel.xcdatamodel */,
+			);
+			currentVersion = 5BE9BC7D28EF154B0017B000 /* JobApplicationTrackerModel.xcdatamodel */;
+			path = JobApplicationTrackerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5BE61B50289BEF1B00E52564 /* Project object */;
 }

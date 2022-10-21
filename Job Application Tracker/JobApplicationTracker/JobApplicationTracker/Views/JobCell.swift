@@ -10,11 +10,8 @@ import UIKit
 class JobCell: UICollectionViewCell {
     
     @IBOutlet weak var companyLabel: UILabel!
-    
     @IBOutlet weak var positionLabel: UILabel!
-    
     @IBOutlet weak var locationLabel: UILabel!
-    
     @IBOutlet weak var statusLabel: UILabel!
     
     func setupCell(with job: Job) {
