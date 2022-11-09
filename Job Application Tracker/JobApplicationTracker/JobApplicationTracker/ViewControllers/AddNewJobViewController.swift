@@ -9,14 +9,19 @@ import UIKit
 import CoreData
 
 protocol AddNewJobViewControllerDelegate {
-    func addNewJob(_ viewController: AddNewJobViewController, addedJob: Job)
+    func addJob(newJob: Job)
+    var alertMessage: String? { get set }
+}
+
+protocol ReloadFromAddNewJobViewControllerDelegate {
+    func reloadJobApplications(_ viewController: AddNewJobViewController, alertMessage: String?)
 }
 
 class AddNewJobViewController: UIViewController {
     
-    let companyNameTextfield = Textfield(placeholder: " Company name")
-    let positionTextfield = Textfield(placeholder: " Position")
-    let locationTextfield = Textfield(placeholder: " Location")
+    let companyNameTextfield = Textfield(placeholder: "Company name")
+    let positionTextfield = Textfield(placeholder: "Position")
+    let locationTextfield = Textfield(placeholder: "Location")
     let statusLabel = StatusLabel()
     let statusPopUpButton = PopUpButton()
     let notesTextView = TextView(placeholderText: "Notes")
@@ -26,6 +31,7 @@ class AddNewJobViewController: UIViewController {
     }
     
     var delegate: AddNewJobViewControllerDelegate?
+    var reloadDelegate: ReloadFromAddNewJobViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +69,9 @@ class AddNewJobViewController: UIViewController {
         newJob.status = statusPopUpButton.currentTitle!
         newJob.notes = notesTextView.text!
         
-        delegate?.addNewJob(self, addedJob: newJob)
+        delegate?.addJob(newJob: newJob)
+        let message = delegate?.alertMessage
+        reloadDelegate?.reloadJobApplications(self, alertMessage: message)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -124,4 +132,3 @@ extension AddNewJobViewController: UITextViewDelegate {
         }
     }
 }
-

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B00FE6B28B8F90900C6F71D /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00FE6A28B8F90900C6F71D /* JobCell.swift */; };
+		5B08AD47291375E6005E788E /* CoreDataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08AD46291375E6005E788E /* CoreDataCoordinator.swift */; };
 		5BE61B5C289BEF1B00E52564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE61B5B289BEF1B00E52564 /* AppDelegate.swift */; };
 		5BE61B5E289BEF1B00E52564 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE61B5D289BEF1B00E52564 /* SceneDelegate.swift */; };
 		5BE61B60289BEF1B00E52564 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE61B5F289BEF1B00E52564 /* HomeViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		5B00FE6A28B8F90900C6F71D /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
+		5B08AD46291375E6005E788E /* CoreDataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCoordinator.swift; sourceTree = "<group>"; };
 		5BE61B58289BEF1B00E52564 /* JobApplicationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobApplicationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE61B5B289BEF1B00E52564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE61B5D289BEF1B00E52564 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				5BE9BC7C28EF154B0017B000 /* JobApplicationTrackerModel.xcdatamodeld */,
 				5BE9BC7A28EF15050017B000 /* CoreDataManager.swift */,
+				5B08AD46291375E6005E788E /* CoreDataCoordinator.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				5B00FE6B28B8F90900C6F71D /* JobCell.swift in Sources */,
 				5BE9BC7528EF12780017B000 /* DeleteButton.swift in Sources */,
 				5BE9BC6F28EF11F50017B000 /* TextView.swift in Sources */,
+				5B08AD47291375E6005E788E /* CoreDataCoordinator.swift in Sources */,
 				5BE9BC7B28EF15050017B000 /* CoreDataManager.swift in Sources */,
 				5BE9BC7128EF12280017B000 /* PopUpButton.swift in Sources */,
 				5BE61B5C289BEF1B00E52564 /* AppDelegate.swift in Sources */,
