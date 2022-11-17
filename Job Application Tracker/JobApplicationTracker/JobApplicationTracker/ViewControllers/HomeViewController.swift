@@ -87,7 +87,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    // TODO: - fix the editing after search bug.
     func makeSearchQuery() {
         guard let queryText = searchBar.text, !queryText.isEmpty else {
             showAlert(title: "No text was entered.", message: "Please enter a company to search for.")
@@ -132,9 +131,9 @@ class HomeViewController: UIViewController {
         sheet.prefersGrabberVisible = true
         present(nav, animated: true, completion: nil)
     }
-    
-    func showJobDetailViewController(title: String, job: Job, index: Int) {
-        let jobDetailViewController = JobDetailViewController(index: index)
+
+    func showJobDetailViewController(title: String, job: Job, uuid: UUID) {
+        let jobDetailViewController = JobDetailViewController(uuid: uuid)
         let coreDataCoordinator = CoreDataCoordinator()
         jobDetailViewController.delegate = coreDataCoordinator
         jobDetailViewController.title = title
@@ -168,7 +167,8 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        showJobDetailViewController(title: "Edit job application", job: delegate.jobsArray[indexPath.row], index: indexPath.row)
+        guard let jobUuid = delegate.jobsArray[indexPath.row].uuid else { return }
+        showJobDetailViewController(title: "Edit job application", job: delegate.jobsArray[indexPath.row], uuid: jobUuid)
     }
 }
 

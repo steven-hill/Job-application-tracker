@@ -70,9 +70,9 @@ extension CoreDataCoordinator: HomeViewControllerDelegate {
 
 extension CoreDataCoordinator: JobDetailViewControllerDelegate {
     
-    func editJob(editedJobCompany: String, editedJobPosition: String, editedJobLocation: String, editedJobStatus: String, editedJobNotes: String, editedJobIndex: Int) {
+    func editJob(editedJobCompany: String, editedJobPosition: String, editedJobLocation: String, editedJobStatus: String, editedJobNotes: String, uuid: UUID) {
         
-        coreDataManager.editSelectedJob(editedJobCompany: editedJobCompany, editedJobPosition: editedJobPosition, editedJobLocation: editedJobLocation, editedJobStatus: editedJobStatus, editedJobNotes: editedJobNotes, editedJobIndex: editedJobIndex)
+        coreDataManager.editSelectedJob(editedJobCompany: editedJobCompany, editedJobPosition: editedJobPosition, editedJobLocation: editedJobLocation, editedJobStatus: editedJobStatus, editedJobNotes: editedJobNotes, uuid: uuid)
         
         coreDataManager.saveContext { [weak self] result in
             guard let self = self else { return }
@@ -87,8 +87,8 @@ extension CoreDataCoordinator: JobDetailViewControllerDelegate {
         }
     }
     
-    func deleteJob(index: Int) {
-        coreDataManager.delete(index: index)
+    func deleteJob(uuid: UUID) {
+        coreDataManager.delete(uuid: uuid)
         
         coreDataManager.saveContext { [weak self] result in
             guard let self = self else { return }

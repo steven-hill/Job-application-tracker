@@ -68,6 +68,7 @@ class AddNewJobViewController: UIViewController {
         newJob.location = locationTextfield.text!
         newJob.status = statusPopUpButton.currentTitle!
         newJob.notes = notesTextView.text!
+        newJob.uuid = UUID()
         
         delegate?.addJob(newJob: newJob)
         let message = delegate?.alertMessage

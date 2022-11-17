@@ -9,8 +9,8 @@ import UIKit
 import CoreData
 
 protocol JobDetailViewControllerDelegate {
-    func editJob(editedJobCompany: String, editedJobPosition: String, editedJobLocation: String, editedJobStatus: String, editedJobNotes: String, editedJobIndex: Int)
-    func deleteJob(index: Int)
+    func editJob(editedJobCompany: String, editedJobPosition: String, editedJobLocation: String, editedJobStatus: String, editedJobNotes: String, uuid: UUID)
+    func deleteJob(uuid: UUID)
     var alertMessage: String? { get set }
 }
 
@@ -20,10 +20,10 @@ protocol ReloadFromJobDetailViewControllerDelegate {
 
 class JobDetailViewController: UIViewController {
     
-    var index: Int
+    var uuid: UUID
     
-    init(index: Int) {
-        self.index = index
+    init(uuid: UUID) {
+        self.uuid = uuid
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -76,16 +76,15 @@ class JobDetailViewController: UIViewController {
     @objc func cancelTapped() {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     @objc func doneTapped() {
         let editedJobCompany = companyNameTextfield.text!
         let editedJobPosition = positionTextfield.text!
         let editedJobLocation = locationTextfield.text!
         let editedJobStatus = statusPopUpButton.currentTitle!
         let editedJobNotes = notesTextView.text!
-        let editedJobIndex = index
-        
-        delegate?.editJob(editedJobCompany: editedJobCompany, editedJobPosition: editedJobPosition, editedJobLocation: editedJobLocation, editedJobStatus: editedJobStatus, editedJobNotes: editedJobNotes, editedJobIndex: editedJobIndex)
+
+        delegate?.editJob(editedJobCompany: editedJobCompany, editedJobPosition: editedJobPosition, editedJobLocation: editedJobLocation, editedJobStatus: editedJobStatus, editedJobNotes: editedJobNotes, uuid: uuid)
         let message = delegate?.alertMessage
         reloadDelegate?.reloadJobApplications(self, alertMessage: message)
         self.dismiss(animated: true, completion: nil)
@@ -95,7 +94,7 @@ class JobDetailViewController: UIViewController {
         let alert = UIAlertController(title: "Are you sure?", message: "", preferredStyle: .alert)
         
         let delete = UIAlertAction(title: "Delete", style: .default) { (delete) in
-            self.delegate?.deleteJob(index: self.index)
+            self.delegate?.deleteJob(uuid: self.uuid)
             let message = self.delegate?.alertMessage
             self.reloadDelegate?.reloadJobApplications(self, alertMessage: message)
             self.dismiss(animated: true, completion: nil)

@@ -63,7 +63,7 @@ class CoreDataManager {
     
     // MARK: - Core Data editing method
     
-    func editSelectedJob(editedJobCompany: String, editedJobPosition: String, editedJobLocation: String, editedJobStatus: String, editedJobNotes: String, editedJobIndex: Int) {
+    func editSelectedJob(editedJobCompany: String, editedJobPosition: String, editedJobLocation: String, editedJobStatus: String, editedJobNotes: String, uuid: UUID) {
         fetchAllJobApplications { [weak self] result in
             guard let self = self else { return }
             
@@ -74,20 +74,21 @@ class CoreDataManager {
                 print(error)
             }
         }
-        
-        persistedJobs[editedJobIndex].company = editedJobCompany
-        persistedJobs[editedJobIndex].position = editedJobPosition
-        persistedJobs[editedJobIndex].location = editedJobLocation
-        persistedJobs[editedJobIndex].status = editedJobStatus
-        persistedJobs[editedJobIndex].notes = editedJobNotes
+
+        let selectedJob = persistedJobs.filter { $0.uuid == uuid }
+        selectedJob[0].company = editedJobCompany
+        selectedJob[0].position = editedJobPosition
+        selectedJob[0].location = editedJobLocation
+        selectedJob[0].status = editedJobStatus
+        selectedJob[0].notes = editedJobNotes
     }
     
     // MARK: - Core Data deleting method
     
-    func delete(index: Int) {
+    func delete(uuid: UUID) {
         fetchAllJobApplications { [weak self] result in
             guard let self = self else { return }
-            
+
             switch result {
             case .success(let jobs):
                 self.persistedJobs = jobs
@@ -95,8 +96,8 @@ class CoreDataManager {
                 print(error)
             }
         }
-        context.delete(persistedJobs[index])
-        persistedJobs.remove(at: index)
+        let selectedJob = persistedJobs.filter { $0.uuid == uuid }
+        context.delete(selectedJob[0])
     }
     
     // MARK: - Core Data search query method
